@@ -1,0 +1,59 @@
+// program to read integer values n (n > 0) from the console
+// and, for each one, print the sum of the values from 1 to n
+
+program Test {
+   const int myX;
+   int i;
+   int k;
+   int myVar;
+   int newthing;
+   [][]int array2d := new [5][5]int;
+   []int myArray := new [10]int;
+   void SumUp() {
+      int j, sum;
+      
+      void Subtract() {
+         i := i - 1;
+      }
+      
+      void Add() {
+         if(i > 0) {
+            sum := sum + i; 
+            Subtract();
+            Add();
+         }
+      }
+      
+      j := i;
+      sum := 0;
+      Add();
+      write "The sum of the values from 1 to ";
+      write j; write " is ";
+      writeln sum;
+   }
+
+   void main() {
+      for(i := 0;i:= i+1; i < 10;){
+        k :=2;
+      }
+      k := 5<1? 6:7;
+      write "Enter value for i (or 0 to stop): ";
+      i:= 0;
+      myX := 3;
+      newthing :=4;
+      array2d[2][2] := newthing;
+      
+      myArray[0] := myX;
+      myArray[1] := myX;
+      myArray[2] := myX;
+      myArray[9] := myX;
+      myVar := myArray[1];
+      read i;
+      while(i > 0) {
+         SumUp();
+         write "Enter value for i (or 0 to stop): ";
+         read i;
+      }
+   }
+}
+
